@@ -1,0 +1,18 @@
+@page "/search"
+@model SearchModel
+
+<h2>Search Results</h2>
+
+@if (Model.Results != null && Model.Results.Any())
+{
+    <ul>
+        @foreach (var result in Model.Results)
+        {
+            <li>@result</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No results found.</p>
+}
